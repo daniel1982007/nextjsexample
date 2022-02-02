@@ -1,0 +1,25 @@
+.back {
+    background-color: darkblue;
+    padding: 10px;
+    color: #fff;
+    display: inline-block;
+}
+
+.formContainer {
+    margin-top: 20px
+}
+
+.mainContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: lightgrey;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textCenter {
+    text-align: center;
+}
