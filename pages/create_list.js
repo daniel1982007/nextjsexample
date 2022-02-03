@@ -10,7 +10,7 @@ const CreateList = () => {
         <Layout>
             <Header title='create a todo' />
             <Link href='/'><a className={styles.back}>go back to all todolist</a></Link>
-            <form class={styles.formFields}>
+            <form className={styles.formFields}>
                 <div className={styles.field}>
                     <label className={styles.block}>title</label>
                     <input type='text' placeholder="enter title" />

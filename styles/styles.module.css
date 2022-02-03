@@ -2,6 +2,11 @@
     padding: 10px;
     color: #000;
     display: inline-block;
+    transition: color 350ms ease
+}
+
+.back:hover {
+    color: darkgreen;
 }
 
 .back::after {
@@ -10,6 +15,11 @@
     display: block;
     height: 1px;
     background-color: #000;
+    transition: background-color 350ms ease;
+}
+
+.back:hover::after {
+    background-color: darkgreen;
 }
 
 .formFields {
@@ -48,7 +58,7 @@
 
 .btn {
     padding: 0.7em;
-    margin-top: 20px;
+    margin-top: 80px;
     background-color: darkgreen;
     border: none;
     color: #fff;
@@ -59,4 +69,18 @@
 
 .btn:hover {
     cursor: pointer;
+}
+
+.itembox {
+    margin: 20px
+}
+
+.title {
+    font-size: 26px;
+    text-decoration: underline;
+    transition: all 350ms ease;
+}
+
+.text {
+    font-size: 20px;
 }

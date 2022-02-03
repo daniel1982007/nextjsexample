@@ -1,11 +1,13 @@
+import Link from "next/link"
+import styles from '../styles/styles.module.css'
+
 const TodoList = ({todos})  => {
-    console.log(todos)
     return (
         todos.map(todo => {
             return (
-                <div key={todo.id}>
-                    <h1>{todo.title}</h1>
-                    <h2>{todo.body}</h2>
+                <div key={todo.id} className={styles.itembox}>
+                    <Link href={`/todo/[id]`}><a className={styles.title}>{todo.title}</a></Link>
+                    <p className={styles.text}>{todo.body}</p>
                 </div>
             )
         })
