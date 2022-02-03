@@ -1,12 +1,34 @@
 .back {
-    background-color: darkblue;
     padding: 10px;
-    color: #fff;
+    color: #000;
     display: inline-block;
 }
 
-.formContainer {
-    margin-top: 20px
+.back::after {
+    content: '';
+    margin-top: 4px;
+    display: block;
+    height: 1px;
+    background-color: #000;
+}
+
+.formFields {
+    width: 50%;
+}
+
+.field {
+    margin-top: 20px;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+}
+
+.block {
+    display: block;
 }
 
 .mainContainer {
@@ -22,4 +44,19 @@
 
 .textCenter {
     text-align: center;
+}
+
+.btn {
+    padding: 0.7em;
+    margin-top: 20px;
+    background-color: darkgreen;
+    border: none;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
