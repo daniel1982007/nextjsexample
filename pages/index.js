@@ -1,13 +1,16 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import TodoList from '../components/TodoList'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
-import styles from '../styles/styles.module.css'
-import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../firebase-config'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
-export default function Home({todos}) {
+export default function Home() {
+  const router = useRouter()
+  
+  useEffect(() => {
+    router.push('/todos')
+  }, [router])
+
   return (
     <Layout>
       <Header title='Create Next App' />
@@ -18,16 +21,4 @@ export default function Home({todos}) {
       </footer>
     </Layout>
   )
-}
-
-export async function getServerSideProps() {
-  const todolist = await getDocs(collection(db, 'posts'))
-  const todos = todolist.docs.map(todo => ({...todo.data(), id: todo.id}))
-  console.log(todos)
-
-  return {
-    props: {
-      todos
-    }
-  }
 }
