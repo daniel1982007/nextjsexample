@@ -11,7 +11,7 @@ export default function Todos({todos}) {
   return (
     <Layout>
       <Header title='Create Next App' />
-      <Link href='/create_list'><a className={styles.back}>create a todo</a></Link>
+      <Link href='/create_list'><a className={styles.back}>create a todo test</a></Link>
       {/* <TodoList todos={todos} /> */}
       {todos.map(todo => {
           return (
