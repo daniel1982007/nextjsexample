@@ -11,7 +11,7 @@ export default function Home({todos}) {
   return (
     <Layout>
       <Header title='Create Next App' />
-      <Link href='/create_list'><a className={styles.back}>create a todo</a></Link>
+      <Link href='/create_list'><a className={styles.back}>on branch lps</a></Link>
       <TodoList todos={todos} />
       <footer>
         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />  
