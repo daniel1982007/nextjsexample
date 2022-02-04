@@ -16,7 +16,7 @@ export default function Todos({todos}) {
       {todos.map(todo => {
           return (
             <div key={todo.id} className={styles.itembox}>
-                <Link href={`/todo/[id]`}><a className={styles.title}>{todo.title}</a></Link>
+                <Link href={`/todo/${todo.id}`}><a className={styles.title}>{todo.title}</a></Link>
                 <p className={styles.text}>{todo.body}</p>
             </div>
           )
@@ -33,7 +33,7 @@ export async function getServerSideProps(context) {
   const todolist = await getDocs(collection(db, 'posts'))
   const todos = todolist.docs.map(todo => ({...todo.data(), id: todo.id}))
   console.log(todos)
-  console.log(context.query)
+  // console.log(context.query)
 
   return {
     props: {

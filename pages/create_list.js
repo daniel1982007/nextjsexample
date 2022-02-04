@@ -5,7 +5,6 @@ import styles from '../styles/styles.module.css'
 
 
 const CreateList = () => {
-    console.log(styles)
     return (
         <Layout>
             <Header title='create a todo' />
